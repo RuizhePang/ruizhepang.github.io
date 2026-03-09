@@ -4,23 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ruizhe Pang</title>
-    <meta name="description" content="Ruizhe Pang — Undergraduate student. Interests in speech signal processing." />
-
+    <meta name="description" content="Ruizhe Pang — Third-year undergraduate student interested in speech signal processing." />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <a class="skip" href="#content">Skip to content</a>
-    <div class="bg" aria-hidden="true"></div>
-
     <div class="container">
       <header class="header">
-        <div class="brand" aria-label="Site">
-          <div class="mark" aria-hidden="true"></div>
-          <div>
-            <h1>Ruizhe Pang</h1>
-            <div class="sub">Undergraduate (Year 3) · Speech Signal Processing</div>
-          </div>
+        <div>
+          <h1 class="name">Ruizhe Pang</h1>
+          <p class="tagline">Third-year undergraduate · Speech Signal Processing</p>
         </div>
 
         <nav class="nav" aria-label="Primary">
@@ -30,8 +23,8 @@
         </nav>
       </header>
 
-      <main id="content">
-        <section class="panel hero" id="about">
+      <main class="main">
+        <section class="hero" id="about">
           <div class="avatar" aria-label="Portrait">
             <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
             <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
@@ -39,28 +32,23 @@
           </div>
 
           <div>
-            <div class="kicker">About</div>
-            <h2 class="title">I study speech signals.</h2>
+            <h2 class="h-title">Research interests in speech and audio.</h2>
             <p class="lead">
-              I am a third-year undergraduate student interested in speech signal processing, representation learning, and practical audio systems.
+              I am a third-year undergraduate student. My current interests include speech signal processing, speech representation learning, and practical audio systems.
             </p>
 
-            <div class="meta" aria-label="Quick facts">
-              <span class="chip"><span class="dot" aria-hidden="true"></span>Speech Signal Processing</span>
-              <span class="chip"><span class="dot g" aria-hidden="true"></span>Machine Learning for Audio</span>
-              <a class="chip" href="https://github.com/RuizhePang" target="_blank" rel="noreferrer">GitHub</a>
-              <!-- TODO: add Google Scholar / CV / Email links here -->
+            <div class="links" aria-label="Links">
+              <a href="https://github.com/RuizhePang" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>
+              <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
             </div>
           </div>
         </section>
 
-        <div class="grid">
-          <section class="panel section" id="publications">
+        <section class="section two" id="publications">
+          <div class="card">
             <h2>Publications</h2>
-            <p>
-              Selected publications and preprints. (Replace with your own items.)
-            </p>
-
             <ol class="pub-list">
               <li class="pub">
                 <p class="t">Paper title goes here</p>
@@ -80,37 +68,31 @@
                 </div>
               </li>
             </ol>
-          </section>
+          </div>
 
-          <aside class="panel section" aria-label="Sidebar">
-            <h2>Focus</h2>
+          <aside class="card" id="contact" aria-label="Contact">
+            <h2>Contact</h2>
             <div class="kv">
-              <div class="row"><span class="k">Primary</span><span class="v">Speech</span></div>
-              <div class="row"><span class="k">Secondary</span><span class="v">Audio ML</span></div>
-              <div class="row"><span class="k">Current</span><span class="v">Year 3 Undergraduate</span></div>
+              <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:yourname@domain.com">yourname@domain.com</a></span></div>
+              <div class="row"><span class="k">Affiliation</span><span class="v">(add your university)</span></div>
+              <div class="row"><span class="k">Location</span><span class="v">(optional)</span></div>
             </div>
-
-            <div style="height:12px"></div>
-
-            <h2 id="contact">Contact</h2>
-            <p>
-              Add your email, affiliation, and links.
+            <p style="margin:12px 0 0;color:var(--muted);font-size:13px">
+              Replace the placeholder links above with your profiles.
             </p>
-            <div class="kv">
-              <div class="row"><span class="k">Email</span><span class="v"><a href="#">yourname@domain.com</a></span></div>
-              <div class="row"><span class="k">Scholar</span><span class="v"><a href="#">Google Scholar</a></span></div>
-              <div class="row"><span class="k">CV</span><span class="v"><a href="#">PDF</a></span></div>
-            </div>
           </aside>
-        </div>
+        </section>
 
-        <footer class="panel footer">
+        <footer class="footer">
           <span>© <span data-js="year"></span> Ruizhe Pang</span>
-          <span>Built with plain HTML/CSS</span>
+          <span>Last updated: <span id="ts"></span></span>
         </footer>
       </main>
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script>
+      document.getElementById('ts').textContent = new Date().toISOString().slice(0,10);
+    </script>
   </body>
 </html>
