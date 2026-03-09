@@ -8,8 +8,6 @@
   --rule: #e6e6e6;
   --link: #0b57d0;
   --max: 900px;
-  --tag-bg: #f6f6f6;
-  --tag-bd: #e6e6e6;
 }
 
 *{box-sizing:border-box}
@@ -62,7 +60,11 @@ a:hover{text-decoration: underline}
 .avatar img{width:100%; height:100%; object-fit:cover; display:block}
 .avatar .placeholder{color: var(--faint); font-size: 12px; text-align:center; padding: 0 10px}
 
-h2{margin: 22px 0 8px; font-size: 16px; font-weight: 700}
+h2{
+  margin: 22px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
 
 p{margin: 0 0 10px}
 .lead{color: var(--muted)}
@@ -74,29 +76,36 @@ p{margin: 0 0 10px}
 
 .small{font-size: 14px; color: var(--muted)}
 
-/* Publications (flat list + venue/journal tags) */
-.pub-list{list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule)}
-.pub{padding: 12px 0; border-bottom: 1px solid var(--rule)}
-.pub-head{display:flex; gap: 10px; align-items:baseline; flex-wrap:wrap}
-.pub .t{margin:0; font-weight: 700}
-.pub .meta{margin: 4px 0 0; color: var(--muted)}
-.pub .links{margin-top: 6px; font-size: 13px}
-.pub .links a{color: var(--muted)}
-.pub .links a:hover{color: var(--text)}
+/* Publications (redesigned)
+   Goals: scan-friendly, consistent spacing, year alignment.
+*/
+.pub-year{margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule)}
+.pub-year:first-of-type{border-top: 0; padding-top: 0}
+.pub-year h3{margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--muted)}
 
-.tag{
-  display:inline-flex;
-  align-items:center;
-  padding: 2px 8px;
-  border: 1px solid var(--tag-bd);
-  background: var(--tag-bg);
-  border-radius: 999px;
-  font-size: 12px;
-  color: var(--muted);
+.pub-list{list-style: none; padding: 0; margin: 0}
+.pub{
+  display:grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  padding: 10px 0;
 }
-.tag.conf{background:#f7f7ff; border-color:#e3e3ff}
-.tag.jour{background:#f7fffb; border-color:#dff3ea}
-.tag.pre{background:#fffaf3; border-color:#f3e6cf}
+.pub + .pub{border-top: 1px solid var(--rule)}
+.pub .y{color: var(--faint); font-size: 13px; padding-top: 2px}
+.pub .t{margin:0; font-weight: 700}
+.pub .m{margin: 2px 0 0; color: var(--muted)}
+.pub .v{font-style: italic}
+.pub .l{margin: 6px 0 0; font-size: 13px; color: var(--muted)}
+.pub .l a{color: var(--muted)}
+.pub .l a:hover{color: var(--text)}
+
+/* Right column (optional notes) */
+.aside{
+  border-left: 1px solid var(--rule);
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
 
 .footer{
   margin-top: 28px;
@@ -113,6 +122,8 @@ p{margin: 0 0 10px}
 @media (max-width: 820px){
   .header{flex-direction:column; align-items:flex-start}
   .two{grid-template-columns: 1fr}
+  .pub{grid-template-columns: 44px 1fr}
+  .aside{border-left:0; padding-left:0; border-top:1px solid var(--rule); padding-top:12px}
 }
 
 @media print{
