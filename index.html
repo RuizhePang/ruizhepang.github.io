@@ -4,33 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ruizhe Pang</title>
-    <meta name="description" content="Ruizhe Pang — third-year undergraduate student interested in speech signal processing." />
+    <meta name="description" content="Ruizhe Pang — undergraduate student interested in speech signal processing." />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
     <div class="container">
       <header class="header">
-        <div>
+        <div class="header-top">
           <h1 class="name">Ruizhe Pang</h1>
-                  </div>
-
-        <nav class="nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#publications">Publications</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-        </nav>
+          <nav class="nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
       </header>
 
       <main class="main">
-        <section id="about" class="two">
-          <div>
-            <div class="avatar" aria-label="Portrait">
-              <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
-              <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
-              <div class="placeholder">Avatar placeholder<br/>assets/img/avatar.jpg</div>
-            </div>
+        <section id="about" class="about">
+          <div class="avatar" aria-label="Portrait">
+            <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
+            <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
+            <div class="placeholder">Avatar placeholder<br/>assets/img/avatar.jpg</div>
           </div>
 
           <div>
@@ -52,8 +49,7 @@
               <h2>Contact</h2>
               <p class="small">
                 Email: <a href="mailto:yourname@domain.com">yourname@domain.com</a><br />
-                Affiliation: (add your university / lab)<br />
-                Location: (optional)
+                Affiliation: (add your university / lab)
               </p>
             </section>
           </div>
@@ -61,42 +57,32 @@
 
         <section id="publications">
           <h2>Publications</h2>
-          <p class="small">Placeholders. Replace with your papers, preprints, or course projects.</p>
+          <ol class="pub-list">
+            <li class="pub">
+              <p class="title">Paper title goes here <span class="tag">Conference</span></p>
+              <p class="meta"><strong>Ruizhe Pang</strong>, Coauthor Name. <em>Venue Name</em>.</p>
+              <div class="links"><a href="#">PDF</a> · <a href="#">arXiv</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></div>
+            </li>
 
-          <div class="pub-year">
-            <h3>2026</h3>
-            <ol class="pub-list">
-              <li class="pub">
-                <div class="y">2026</div>
-                <div>
-                  <p class="t">Paper title goes here</p>
-                  <p class="m"><strong>Ruizhe Pang</strong>, Coauthor Name. <span class="v">Conference / Journal</span>.</p>
-                  <div class="l"><a href="#">PDF</a> · <a href="#">arXiv</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></div>
-                </div>
-              </li>
-            </ol>
-          </div>
+            <li class="pub">
+              <p class="title">Another paper title <span class="tag">Journal</span></p>
+              <p class="meta"><strong>Ruizhe Pang</strong>, Coauthor Name. <em>Journal Name</em>.</p>
+              <div class="links"><a href="#">PDF</a> · <a href="#">Project</a></div>
+            </li>
 
-          <div class="pub-year">
-            <h3>2025</h3>
-            <ol class="pub-list">
-              <li class="pub">
-                <div class="y">2025</div>
-                <div>
-                  <p class="t">Another paper title</p>
-                  <p class="m"><strong>Ruizhe Pang</strong>. <span class="v">Workshop / Preprint</span>.</p>
-                  <div class="l"><a href="#">PDF</a> · <a href="#">Project</a></div>
-                </div>
-              </li>
-            </ol>
-          </div>
+            <li class="pub">
+              <p class="title">Preprint / technical report title <span class="tag">Preprint</span></p>
+              <p class="meta"><strong>Ruizhe Pang</strong>. <em>arXiv</em>.</p>
+              <div class="links"><a href="#">arXiv</a></div>
+            </li>
+          </ol>
         </section>
 
         <section id="news">
           <h2>News</h2>
           <ul class="small">
-            <li>[2026-03] Building this website.</li>
-            <li>[YYYY-MM] (Add an update, award, release, etc.)</li>
+            <li>Building this website.</li>
+            <li>(Add an update, award, release, etc.)</li>
           </ul>
         </section>
 

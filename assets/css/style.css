@@ -1,13 +1,15 @@
-/* Professional academic homepage — paper-like, minimalist */
+/* Professional academic homepage — minimalist, no sidebar, no years */
 
 :root{
   --bg: #ffffff;
   --text: #111;
   --muted: #555;
   --faint: #777;
-  --rule: #e6e6e6;
+  --rule: #e8e8e8;
   --link: #0b57d0;
-  --max: 900px;
+  --max: 860px;
+  --tag-bg: #f6f6f6;
+  --tag-bd: #e6e6e6;
 }
 
 *{box-sizing:border-box}
@@ -18,40 +20,44 @@ body{
   color: var(--text);
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-.container{max-width: var(--max); margin: 0 auto; padding: 34px 18px 60px}
+.container{max-width: var(--max); margin: 0 auto; padding: 34px 18px 64px}
 
 a{color: var(--link); text-decoration: none}
 a:hover{text-decoration: underline}
 
 .header{
-  display:flex;
-  justify-content:space-between;
-  gap: 18px;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--rule);
-  align-items: baseline;
 }
 
-.name{margin:0; font-size: 26px; font-weight: 700}
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.name{margin:0; font-size: 28px; font-weight: 700}
 
 .nav{display:flex; gap: 12px; flex-wrap:wrap; align-items:center}
 .nav a{color: var(--muted); font-size: 14px}
 .nav a:hover{color: var(--text); text-decoration:none}
 
-.main{margin-top: 20px}
+.main{margin-top: 22px}
 
-.two{
+.about{
   display:grid;
-  grid-template-columns: 150px 1fr;
-  gap: 22px;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
   align-items: start;
 }
 
 .avatar{
-  width: 150px; height: 150px;
+  width: 140px; height: 140px;
   border: 1px solid var(--rule);
   background: #fafafa;
   display:flex; align-items:center; justify-content:center;
@@ -60,55 +66,39 @@ a:hover{text-decoration: underline}
 .avatar img{width:100%; height:100%; object-fit:cover; display:block}
 .avatar .placeholder{color: var(--faint); font-size: 12px; text-align:center; padding: 0 10px}
 
-h2{
-  margin: 22px 0 8px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-p{margin: 0 0 10px}
-.lead{color: var(--muted)}
+.lead{margin: 0 0 10px; color: var(--muted)}
 
 .links{margin: 8px 0 0; display:flex; gap: 14px; flex-wrap:wrap}
 .links a{font-size: 14px}
+
+h2{margin: 26px 0 8px; font-size: 16px; font-weight: 700}
 
 .rule{border-top: 1px solid var(--rule); margin: 18px 0}
 
 .small{font-size: 14px; color: var(--muted)}
 
-/* Publications (redesigned)
-   Goals: scan-friendly, consistent spacing, year alignment.
-*/
-.pub-year{margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule)}
-.pub-year:first-of-type{border-top: 0; padding-top: 0}
-.pub-year h3{margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--muted)}
+/* Publications: traditional single-column list */
+.pub-list{list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule)}
+.pub{padding: 12px 0; border-bottom: 1px solid var(--rule)}
+.pub .title{margin:0; font-weight: 700}
+.pub .meta{margin: 3px 0 0; color: var(--muted)}
+.pub .links{margin-top: 6px; font-size: 13px}
+.pub .links a{color: var(--muted)}
+.pub .links a:hover{color: var(--text)}
 
-.pub-list{list-style: none; padding: 0; margin: 0}
-.pub{
-  display:grid;
-  grid-template-columns: 56px 1fr;
-  gap: 12px;
-  padding: 10px 0;
-}
-.pub + .pub{border-top: 1px solid var(--rule)}
-.pub .y{color: var(--faint); font-size: 13px; padding-top: 2px}
-.pub .t{margin:0; font-weight: 700}
-.pub .m{margin: 2px 0 0; color: var(--muted)}
-.pub .v{font-style: italic}
-.pub .l{margin: 6px 0 0; font-size: 13px; color: var(--muted)}
-.pub .l a{color: var(--muted)}
-.pub .l a:hover{color: var(--text)}
-
-/* Right column (optional notes) */
-.aside{
-  border-left: 1px solid var(--rule);
-  padding-left: 16px;
+.tag{
+  display:inline-flex;
+  align-items:center;
+  padding: 2px 8px;
+  border: 1px solid var(--tag-bd);
+  background: var(--tag-bg);
+  border-radius: 999px;
+  font-size: 12px;
   color: var(--muted);
-  font-size: 14px;
 }
 
 .footer{
-  margin-top: 28px;
+  margin-top: 30px;
   padding-top: 12px;
   border-top: 1px solid var(--rule);
   color: var(--muted);
@@ -119,11 +109,8 @@ p{margin: 0 0 10px}
   flex-wrap:wrap;
 }
 
-@media (max-width: 820px){
-  .header{flex-direction:column; align-items:flex-start}
-  .two{grid-template-columns: 1fr}
-  .pub{grid-template-columns: 44px 1fr}
-  .aside{border-left:0; padding-left:0; border-top:1px solid var(--rule); padding-top:12px}
+@media (max-width: 720px){
+  .about{grid-template-columns: 1fr}
 }
 
 @media print{
