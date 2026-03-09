@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ruizhe Pang</title>
-    <meta name="description" content="Ruizhe Pang — Third-year undergraduate student interested in speech signal processing." />
+    <meta name="description" content="Ruizhe Pang — third-year undergraduate student interested in speech signal processing." />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -13,28 +13,31 @@
       <header class="header">
         <div>
           <h1 class="name">Ruizhe Pang</h1>
-          <p class="tagline">Third-year undergraduate · Speech Signal Processing</p>
+          <p class="affil">Third-year undergraduate · Speech Signal Processing</p>
         </div>
 
         <nav class="nav" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#publications">Publications</a>
+          <a href="#news">News</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main class="main">
-        <section class="hero" id="about">
-          <div class="avatar" aria-label="Portrait">
-            <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
-            <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
-            <div class="placeholder">Avatar placeholder<br/>assets/img/avatar.jpg</div>
+        <section id="about" class="two">
+          <div>
+            <div class="avatar" aria-label="Portrait">
+              <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
+              <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
+              <div class="placeholder">Avatar placeholder<br/>assets/img/avatar.jpg</div>
+            </div>
           </div>
 
           <div>
-            <h2 class="h-title">Research interests in speech and audio.</h2>
             <p class="lead">
-              I am a third-year undergraduate student. My current interests include speech signal processing, speech representation learning, and practical audio systems.
+              I am a third-year undergraduate student interested in speech signal processing and machine learning for audio.
+              I enjoy building practical systems and studying representations.
             </p>
 
             <div class="links" aria-label="Links">
@@ -43,56 +46,64 @@
               <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
             </div>
+
+            <div class="rule"></div>
+
+            <section id="contact">
+              <h2>Contact</h2>
+              <p class="small">
+                Email: <a href="mailto:yourname@domain.com">yourname@domain.com</a><br />
+                Affiliation: (add your university / lab)<br />
+                Location: (optional)
+              </p>
+            </section>
           </div>
         </section>
 
-        <section class="section two" id="publications">
-          <div class="card">
-            <h2>Publications</h2>
-            <ol class="pub-list">
-              <li class="pub">
-                <p class="t">Paper title goes here</p>
-                <p class="a">Ruizhe Pang, Coauthor Name. <em>Venue</em>, Year.</p>
-                <div class="l">
-                  <a href="#">PDF</a>
-                  <a href="#">Code</a>
-                  <a href="#">Project</a>
-                </div>
-              </li>
+        <section id="publications">
+          <h2>Publications</h2>
+          <p class="small">Placeholders. Replace with your papers, preprints, or course projects.</p>
 
-              <li class="pub">
-                <p class="t">Another paper title</p>
-                <p class="a">Ruizhe Pang. <em>Workshop / arXiv</em>, Year.</p>
-                <div class="l">
-                  <a href="#">arXiv</a>
-                </div>
-              </li>
-            </ol>
-          </div>
+          <ol class="pub-list">
+            <li class="pub">
+              <p class="line1">
+                <span class="title">Paper title goes here</span>. 
+                <span class="authors"><strong>Ruizhe Pang</strong>, Coauthor Name</span>. 
+                <span class="venue">Conference / Journal</span>, 2026.
+              </p>
+              <div class="links">
+                <a href="#">PDF</a> · <a href="#">arXiv</a> · <a href="#">Code</a> · <a href="#">BibTeX</a>
+              </div>
+            </li>
 
-          <aside class="card" id="contact" aria-label="Contact">
-            <h2>Contact</h2>
-            <div class="kv">
-              <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:yourname@domain.com">yourname@domain.com</a></span></div>
-              <div class="row"><span class="k">Affiliation</span><span class="v">(add your university)</span></div>
-              <div class="row"><span class="k">Location</span><span class="v">(optional)</span></div>
-            </div>
-            <p style="margin:12px 0 0;color:var(--muted);font-size:13px">
-              Replace the placeholder links above with your profiles.
-            </p>
-          </aside>
+            <li class="pub">
+              <p class="line1">
+                <span class="title">Another paper title</span>. 
+                <span class="authors"><strong>Ruizhe Pang</strong></span>. 
+                <span class="venue">Workshop / Preprint</span>, 2025.
+              </p>
+              <div class="links">
+                <a href="#">PDF</a> · <a href="#">Project</a>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section id="news">
+          <h2>News</h2>
+          <ul class="small">
+            <li>[2026-03] Building this website.</li>
+            <li>[YYYY-MM] (Add an update, award, release, etc.)</li>
+          </ul>
         </section>
 
         <footer class="footer">
           <span>© <span data-js="year"></span> Ruizhe Pang</span>
-          <span>Last updated: <span id="ts"></span></span>
+          <span>Built with plain HTML/CSS.</span>
         </footer>
       </main>
     </div>
 
     <script src="assets/js/main.js"></script>
-    <script>
-      document.getElementById('ts').textContent = new Date().toISOString().slice(0,10);
-    </script>
   </body>
 </html>
