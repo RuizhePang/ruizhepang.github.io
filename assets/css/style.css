@@ -80,6 +80,16 @@ h2{margin: 28px 0 12px; font-size: 19px; font-weight: 700}
 .section-rule{border-top: 1px solid var(--rule-strong); margin: 22px 0}
 
 .small{font-size: 14px; color: var(--muted)}
+.muted{color: var(--muted)}
+
+/* Education */
+.edu-list{list-style:none; padding:0; margin:0}
+.edu{padding: 10px 0}
+.edu-row{display:flex; justify-content:space-between; gap: 16px; align-items:baseline; flex-wrap:wrap}
+.edu-degree{font-weight:700}
+.edu-school{margin-top: 2px}
+.edu-time{font-size: 14px; white-space: nowrap}
+.edu-notes{margin-top: 6px}
 
 /* Publications — Layout A, with subtle item spacing (no hard borders) */
 .pub-list{list-style:none; padding:0; margin:0}
