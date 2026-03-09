@@ -6,10 +6,13 @@
   --muted: #555;
   --faint: #777;
   --rule: #e8e8e8;
+  --rule-strong: #d9d9d9;
   --link: #0b57d0;
   --max: 860px;
-  --tag-bg: #f6f6f6;
-  --tag-bd: #e6e6e6;
+
+  /* tags: more professional, less "pill" */
+  --tag-bg: #ffffff;
+  --tag-bd: #cfcfcf;
 }
 
 *{box-sizing:border-box}
@@ -49,15 +52,16 @@ a:hover{text-decoration: underline}
 
 .main{margin-top: 22px}
 
+/* About block: simpler, more academic */
 .about{
   display:grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: 18px;
   align-items: start;
 }
 
 .avatar{
-  width: 140px; height: 140px;
+  width: 120px; height: 150px; /* portrait-like */
   border: 1px solid var(--rule);
   background: #fafafa;
   display:flex; align-items:center; justify-content:center;
@@ -71,19 +75,21 @@ a:hover{text-decoration: underline}
 .links{margin: 8px 0 0; display:flex; gap: 14px; flex-wrap:wrap}
 .links a{font-size: 14px}
 
+/* Contact: inline, no nested section feel */
+.contact{margin-top: 10px; color: var(--muted); font-size: 14px}
+
 h2{margin: 26px 0 10px; font-size: 16px; font-weight: 700}
 
-.rule{border-top: 1px solid var(--rule); margin: 18px 0}
+/* Stronger section divider than item dividers */
+.section-rule{border-top: 1px solid var(--rule-strong); margin: 22px 0}
 
 .small{font-size: 14px; color: var(--muted)}
 
-/* Publications — Layout A
-   Line1: title + tags
-   Line2: authors + venue
-   Line3: links
-*/
-.pub-list{list-style:none; padding:0; margin:0; border-top:1px solid var(--rule)}
-.pub{padding: 14px 0; border-bottom:1px solid var(--rule)}
+/* Publications — Layout A, with subtle item spacing (no hard borders) */
+.pub-list{list-style:none; padding:0; margin:0}
+.pub{padding: 12px 0}
+.pub + .pub{margin-top: 6px; padding-top: 18px; border-top: 1px solid var(--rule)}
+
 .pub .line1{display:flex; gap:10px; flex-wrap:wrap; align-items:baseline}
 .pub .title{margin:0; font-weight:700}
 .pub .tags{display:flex; gap:8px; flex-wrap:wrap}
@@ -92,15 +98,18 @@ h2{margin: 26px 0 10px; font-size: 16px; font-weight: 700}
 .pub .line3 a{color: var(--muted)}
 .pub .line3 a:hover{color: var(--text)}
 
+/* Tag: small caps-ish, rectangular, like "badge" */
 .tag{
   display:inline-flex;
   align-items:center;
-  padding: 2px 8px;
+  padding: 2px 7px;
   border: 1px solid var(--tag-bd);
   background: var(--tag-bg);
-  border-radius: 999px;
-  font-size: 12px;
-  color: var(--muted);
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #444;
 }
 
 .footer{
@@ -117,6 +126,7 @@ h2{margin: 26px 0 10px; font-size: 16px; font-weight: 700}
 
 @media (max-width: 720px){
   .about{grid-template-columns: 1fr}
+  .avatar{width: 140px; height: 140px}
 }
 
 @media print{
