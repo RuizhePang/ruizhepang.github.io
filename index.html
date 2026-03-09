@@ -1,34 +1,116 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ruizhe Pang</title>
-    <style>
-      :root{color-scheme:light dark}
-      body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:780px;margin:64px auto;padding:0 20px;line-height:1.6;
-background-color:#ffffff;
-}
-      h1{margin:0 0 8px}
-      .muted{opacity:.7}
-      .card{background:rgba(255,255,255,.72);backdrop-filter:saturate(1.1) blur(6px);-webkit-backdrop-filter:saturate(1.1) blur(6px);
-            border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:28px 26px;box-shadow:0 12px 40px rgba(0,0,0,.06)}
-      @media (prefers-color-scheme: dark){.card{background:rgba(20,20,20,.62);border-color:rgba(255,255,255,.08);box-shadow:0 12px 40px rgba(0,0,0,.35)}}
-      a{color:inherit}
-      code{padding:2px 6px;border-radius:6px;background:rgba(127,127,127,.15)}
-    </style>
+    <meta name="description" content="Ruizhe Pang — Undergraduate student. Interests in speech signal processing." />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <div class="card">
-    <h1>Ruizhe Pang</h1>
-    <p class="muted">Hello 👋 这是我的 GitHub Pages 主页。</p>
-    <p>
-      GitHub: <a href="https://github.com/RuizhePang">@RuizhePang</a>
-    </p>
-    <p class="muted"><code>Last updated:</code> <span id="ts"></span></p>
-    <script>
-      document.getElementById('ts').textContent = new Date().toISOString();
-    </script>
-      </div>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="bg" aria-hidden="true"></div>
+
+    <div class="container">
+      <header class="header">
+        <div class="brand" aria-label="Site">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1>Ruizhe Pang</h1>
+            <div class="sub">Undergraduate (Year 3) · Speech Signal Processing</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="content">
+        <section class="panel hero" id="about">
+          <div class="avatar" aria-label="Portrait">
+            <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
+            <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
+            <div class="placeholder">Avatar placeholder<br/>assets/img/avatar.jpg</div>
+          </div>
+
+          <div>
+            <div class="kicker">About</div>
+            <h2 class="title">I study speech signals.</h2>
+            <p class="lead">
+              I am a third-year undergraduate student interested in speech signal processing, representation learning, and practical audio systems.
+            </p>
+
+            <div class="meta" aria-label="Quick facts">
+              <span class="chip"><span class="dot" aria-hidden="true"></span>Speech Signal Processing</span>
+              <span class="chip"><span class="dot g" aria-hidden="true"></span>Machine Learning for Audio</span>
+              <a class="chip" href="https://github.com/RuizhePang" target="_blank" rel="noreferrer">GitHub</a>
+              <!-- TODO: add Google Scholar / CV / Email links here -->
+            </div>
+          </div>
+        </section>
+
+        <div class="grid">
+          <section class="panel section" id="publications">
+            <h2>Publications</h2>
+            <p>
+              Selected publications and preprints. (Replace with your own items.)
+            </p>
+
+            <ol class="pub-list">
+              <li class="pub">
+                <p class="t">Paper title goes here</p>
+                <p class="a">Ruizhe Pang, Coauthor Name. <em>Venue</em>, Year.</p>
+                <div class="l">
+                  <a href="#">PDF</a>
+                  <a href="#">Code</a>
+                  <a href="#">Project</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <p class="t">Another paper title</p>
+                <p class="a">Ruizhe Pang. <em>Workshop / arXiv</em>, Year.</p>
+                <div class="l">
+                  <a href="#">arXiv</a>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <aside class="panel section" aria-label="Sidebar">
+            <h2>Focus</h2>
+            <div class="kv">
+              <div class="row"><span class="k">Primary</span><span class="v">Speech</span></div>
+              <div class="row"><span class="k">Secondary</span><span class="v">Audio ML</span></div>
+              <div class="row"><span class="k">Current</span><span class="v">Year 3 Undergraduate</span></div>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <h2 id="contact">Contact</h2>
+            <p>
+              Add your email, affiliation, and links.
+            </p>
+            <div class="kv">
+              <div class="row"><span class="k">Email</span><span class="v"><a href="#">yourname@domain.com</a></span></div>
+              <div class="row"><span class="k">Scholar</span><span class="v"><a href="#">Google Scholar</a></span></div>
+              <div class="row"><span class="k">CV</span><span class="v"><a href="#">PDF</a></span></div>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="panel footer">
+          <span>© <span data-js="year"></span> Ruizhe Pang</span>
+          <span>Built with plain HTML/CSS</span>
+        </footer>
+      </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
