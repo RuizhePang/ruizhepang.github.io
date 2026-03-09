@@ -9,10 +9,6 @@
   --rule-strong: #d9d9d9;
   --link: #0b57d0;
   --max: 860px;
-
-  /* tags: more professional, less "pill" */
-  --tag-bg: #ffffff;
-  --tag-bd: #cfcfcf;
 }
 
 *{box-sizing:border-box}
@@ -92,25 +88,11 @@ h2{margin: 26px 0 10px; font-size: 16px; font-weight: 700}
 
 .pub .line1{display:flex; gap:10px; flex-wrap:wrap; align-items:baseline}
 .pub .title{margin:0; font-weight:700}
-.pub .tags{display:flex; gap:8px; flex-wrap:wrap}
 .pub .line2{margin: 4px 0 0; color: var(--muted)}
 .pub .line3{margin: 6px 0 0; font-size: 13px; color: var(--muted)}
 .pub .line3 a{color: var(--muted)}
 .pub .line3 a:hover{color: var(--text)}
 
-/* Tag: small caps-ish, rectangular, like "badge" */
-.tag{
-  display:inline-flex;
-  align-items:center;
-  padding: 2px 7px;
-  border: 1px solid var(--tag-bd);
-  background: var(--tag-bg);
-  border-radius: 4px;
-  font-size: 11px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: #444;
-}
 
 .footer{
   margin-top: 30px;
