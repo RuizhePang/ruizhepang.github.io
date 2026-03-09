@@ -74,7 +74,7 @@ a:hover{text-decoration: underline}
 /* Contact: inline, no nested section feel */
 .contact{margin-top: 10px; color: var(--muted); font-size: 14px}
 
-h2{margin: 26px 0 10px; font-size: 16px; font-weight: 700}
+h2{margin: 28px 0 12px; font-size: 19px; font-weight: 700}
 
 /* Stronger section divider than item dividers */
 .section-rule{border-top: 1px solid var(--rule-strong); margin: 22px 0}
@@ -84,12 +84,12 @@ h2{margin: 26px 0 10px; font-size: 16px; font-weight: 700}
 /* Publications — Layout A, with subtle item spacing (no hard borders) */
 .pub-list{list-style:none; padding:0; margin:0}
 .pub{padding: 12px 0}
-.pub + .pub{margin-top: 6px; padding-top: 18px; border-top: 1px solid var(--rule)}
+.pub + .pub{margin-top: 0; padding-top: 10px; border-top: 1px solid var(--rule)}
 
 .pub .line1{display:flex; gap:10px; flex-wrap:wrap; align-items:baseline}
 .pub .title{margin:0; font-weight:700}
-.pub .line2{margin: 4px 0 0; color: var(--muted)}
-.pub .line3{margin: 6px 0 0; font-size: 13px; color: var(--muted)}
+.pub .line2{margin: 2px 0 0; color: var(--muted)}
+.pub .line3{margin: 4px 0 0; font-size: 13px; color: var(--muted)}
 .pub .line3 a{color: var(--muted)}
 .pub .line3 a:hover{color: var(--text)}
 
