@@ -1,72 +1,125 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ruizhe Pang</title>
-    <style>
-      :root { --fg:#111; --muted:#666; --link:#0b57d0; --bg:#fff; }
-      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--fg); background: var(--bg); }
-      .wrap { max-width: 860px; margin: 48px auto; padding: 0 20px; }
-      h1 { margin: 0 0 8px; font-size: 40px; }
-      .subtitle { color: var(--muted); margin: 0 0 18px; }
-      a { color: var(--link); text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .links a { margin-right: 14px; }
-      .section { margin-top: 34px; }
-      .section h2 { font-size: 22px; margin: 0 0 10px; }
-      ul { margin: 10px 0 0 18px; padding: 0; }
-      li { margin: 10px 0; line-height: 1.45; }
-      .muted { color: var(--muted); }
-      .pub-title { font-weight: 600; }
-      .pub-meta { color: var(--muted); }
-      code { background: #f3f3f3; padding: 2px 6px; border-radius: 6px; }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>Ruizhe Pang</h1>
-      <p class="subtitle">B.S. student in Computer Science, Southern University of Science and Technology (SUSTech)</p>
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruizhe Pang</title>
+  <meta name="description" content="Ruizhe Pang — undergraduate student interested in speech signal processing." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+ </head>
 
-      <p class="links">
-        <a href="https://github.com/RuizhePang" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=UgiODm8AAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
-        <a href="https://cn.linkedin.com/in/ruizhe-pang-385a08364" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="assets/files/CV_RuizhePang.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+ <body>
+  <div class="container">
+   <header class="header">
+    <div class="header-top">
+     <h1 class="name">Ruizhe Pang</h1>
+     <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+     </nav>
+    </div>
+   </header>
+
+   <main class="main">
+    <section id="about" class="about">
+     <div class="avatar" aria-label="Portrait">
+      <!-- TODO: upload your headshot to assets/img/avatar.jpg and uncomment the img tag below -->
+      <!-- <img src="assets/img/avatar.jpg" alt="Portrait of Ruizhe Pang" /> -->
+      <div class="placeholder">Avatar placeholder<br/>assets/img/avatar.jpg</div>
+     </div>
+
+     <div>
+      <p class="lead">
+       I am an undergraduate student interested in speech signal processing and machine learning for audio.
+       I enjoy building practical systems and studying representations.
       </p>
 
-      <p class="muted">Email: ruizhepang <span class="muted">AT</span> gmail.com</p>
+      <p class="small" style="margin: 0 0 10px;">
+       Research interests: speech enhancement, speech separation, self-supervised audio representations, robust ASR.
+      </p>
 
-      <div class="section">
-        <h2>About</h2>
-        <p>
-          I am an undergraduate student at SUSTech. My interests include audio &amp; speech processing and machine learning.
-        </p>
+      <div class="links" aria-label="Links">
+       <a href="https://github.com/RuizhePang" target="_blank" rel="noreferrer">GitHub</a>
+       <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>
+       <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+       <a href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
       </div>
 
-      <div class="section">
-        <h2>Publications</h2>
-        <ul>
-          <li>
-            <span class="pub-title">Neural Forward Filtering for Speaker-Image Separation</span><br />
-            <span class="pub-meta">Preprint, arXiv:2510.05757</span><br />
-            <a href="https://arxiv.org/abs/2510.05757" target="_blank" rel="noreferrer">arXiv</a>
-            · <a href="https://arxiv.org/pdf/2510.05757" target="_blank" rel="noreferrer">PDF</a>
-          </li>
-          <li>
-            <span class="pub-title">(Add your 2nd paper here)</span><br />
-            <span class="pub-meta">(venue / year)</span><br />
-            <span class="muted">Tell me the title + arXiv/DOI/PDF link and I will fill this in.</span>
-          </li>
-        </ul>
-      </div>
+      <p id="contact" class="contact">
+       Email: <a href="mailto:yourname@domain.com">yourname@domain.com</a>
+      </p>
+     </div>
+    </section>
 
-      <div class="section">
-        <h2>CV</h2>
-        <p>
-          Put your CV PDF at <code>assets/files/CV_RuizhePang.pdf</code> in this repo.
-        </p>
-      </div>
-    </div>
-  </body>
+    <div class="section-rule" aria-hidden="true"></div>
+
+    <section id="education">
+     <h2>Education</h2>
+     <ul class="edu-list">
+      <li class="edu">
+       <div class="edu-row">
+        <div>
+         <div class="edu-degree">B.Eng. / B.S. in <span class="muted">(Major)</span></div>
+         <div class="edu-school muted">(University), (City, Country)</div>
+        </div>
+        <div class="edu-time muted">20XX – 20XX</div>
+       </div>
+       <div class="edu-notes small">GPA: X.XX/4.00 · Advisor: (Name) · Honors: (optional)</div>
+      </li>
+     </ul>
+    </section>
+
+    <div class="section-rule" aria-hidden="true"></div>
+
+    <section id="publications">
+     <h2>Publications</h2>
+     <ol class="pub-list">
+      <li class="pub">
+       <div class="line1">
+        <p class="title">Paper title goes here</p>
+</div>
+       <p class="line2"><strong>Ruizhe Pang</strong>, Coauthor Name. <em>Venue Name</em>, 2026.</p>
+       <div class="line3"><a href="#">PDF</a> · <a href="#">arXiv</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></div>
+      </li>
+
+      <li class="pub">
+       <div class="line1">
+        <p class="title">Another paper title</p>
+</div>
+       <p class="line2"><strong>Ruizhe Pang</strong>, Coauthor Name. <em>Journal Name</em>, 2025.</p>
+       <div class="line3"><a href="#">PDF</a> · <a href="#">Project</a></div>
+      </li>
+
+      <li class="pub">
+       <div class="line1">
+        <p class="title">Preprint / technical report title</p>
+</div>
+       <p class="line2"><strong>Ruizhe Pang</strong>. <em>arXiv</em>, 2025.</p>
+       <div class="line3"><a href="#">arXiv</a></div>
+      </li>
+     </ol>
+    </section>
+
+    <div class="section-rule" aria-hidden="true"></div>
+
+    <section id="news">
+     <h2>News</h2>
+     <ul class="small">
+      <li>Building this website.</li>
+      <li>(Add an update, award, release, etc.)</li>
+     </ul>
+    </section>
+
+    <footer class="footer">
+     <span>© <span data-js="year"></span> Ruizhe Pang</span>
+     <span>Built with plain HTML/CSS.</span>
+    </footer>
+   </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+ </body>
 </html>
